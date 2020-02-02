@@ -31,13 +31,13 @@ Enemy.prototype.update = function(dt) {
     this.speed = 100 + Math.floor(Math.random() * 512);
   }
   if (
-    player.x < this.x + 60 &&
-    player.x + 3 > this.x &&
-    player.y < this.y + 25 &&
-    30 + player.y > this.y
+    this.x < this.x + 60 &&
+    this.x + 3 > this.x &&
+    this.y < this.y + 25 &&
+    30 + this.y > this.y
   ) {
     player.x = 200;
-    player.y = 480;
+    player.y = 430;
   }
 };
 
@@ -58,7 +58,20 @@ const Player = function(x, y, speed) {
   this.speed = speed;
   this.sprite = game.player;
 };
-Player.prototype.update = function() {};
+Player.prototype.update = function() {
+  // Prevent player from moving off the canvas
+  if (this.y > 380) {
+    this.y = 380;
+  }
+
+  if (this.x > 400) {
+    this.x = 400;
+  }
+
+  if (this.x < 0) {
+    this.x = 0;
+  }
+};
 Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
