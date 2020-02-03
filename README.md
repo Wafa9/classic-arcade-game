@@ -2,8 +2,11 @@
 
 ## Table of Contents
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+- [Classic Arcade Game Clone Project](#classic-arcade-game-clone-project)
+  - [Table of Contents](#table-of-contents)
+  - [Instructions](#instructions)
+  - [Contributing](#contributing)
+  - [How to Play](#how-to-play)
 
 ## Instructions
 
@@ -18,3 +21,8 @@ For detailed instructions on how to get started, check out this [guide](https://
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+
+## How to Play
+
+Use the up, down, left and right arrow to move the player.
+Move the player away from animas .
