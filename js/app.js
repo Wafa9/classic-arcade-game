@@ -59,17 +59,20 @@ const Player = function(x, y, speed) {
   this.sprite = game.player;
 };
 Player.prototype.update = function() {
-  // Prevent player from moving off the canvas
-  if (player.y > 380) {
+  if (this.y > 380) {
     this.y = 380;
   }
 
-  if (player.x > 400) {
+  if (this.x > 400) {
     this.x = 400;
   }
 
-  if (player.x < 0) {
+  if (this.x < 0) {
     this.x = 0;
+  }
+  if (this.y < 0) {
+    this.x = 200;
+    this.y = 380;
   }
 };
 Player.prototype.render = function() {
